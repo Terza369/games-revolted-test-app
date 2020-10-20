@@ -1,0 +1,23 @@
+Napraviti konzolnu aplikaciju koja simulira napad u igri sa slijedećim pravilima: 
+- Ulazni parametri u sustav za jedan napad su sourceId i targetId.
+- U board.json su spremljeni entiteti koji su aktivni na "boardu".
+- Entitet može biti iz 2 vrste: 1 - Creature, 2 - Avatar. 
+- Aplikacija treba biti spremna za dodavanje novih vrsta entiteta.
+- Creature ne može napasti avatara, avatar može napasti creatura.
+- Entitet ne može napasti ako nije attackReady.
+- Ako creature pokuša napasti avatara ili entitet nije attackReady, vratiti odgovarajuću poruku.
+- Mrtvi entiteti ne mogu napadati, niti biti napadnuti.
+- Nakon napada, health od targeta mora se umanjiti za sourceov attack atribut.
+- Target vraća damage napadaću sa vrijednosti svog Attack atributa (Retaliate).
+- Može imati i listu modifiera: 1 - Armour i 2 - Vulnerability. 
+- Armour modifier umanjuje damage napada za određen value, vulnerability povećava damage koji će entitet primiti.
+- Aplikacija treba biti spremna za nove vrste modifiera koji promjenu vrijednosti napada računaju kao funkciju (npr povećanje napada za x%, povećanje za X puta, itd).
+- Value je vrijednost modifiera. Npr. ako je modifierType 1 i value 2 onda će se na tom creaturu na kojem je modifier spustiti svaki primljeni damage za 2.
+- Nakon napada:
+- attackReady se mora prebaciti na false napadaću.
+- sustav mora spremiti novo stanje entiteta u board.json i vratiti EntityAttackedMessage(na konzolu) sa sljedećim poljima : sourceId, targetId i value.
+- Napadi se simuliraju u rundama, svaki entitet može (ali ne mora) napasti jednom po rundi.
+- Završetak runde treba biti moguć u svakom trenutku.
+- Na prijelazu između rundi svim entitetima AttackReady resetira se na true.
+- Općenito zadatak treba riješiti kao da će biti dio večeg sustava na serveru.
+- pokažite svoju vještinu, koristite sve dobre prakse u programiranju, oblikovne obrasce, apstrakciju, ...
