@@ -12,6 +12,8 @@ let board = new Board('board.json');
 //It is possible to add new entities to the board like this:
 //board.entities.push(new Creature(5, 1, 'e' + (board.entities.length + 1)));
 
+//Change from windows 10
+
 let entityIds;
 let round = 0;
 
