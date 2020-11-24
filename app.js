@@ -13,6 +13,7 @@ let board = new Board('board.json');
 //board.entities.push(new Creature(5, 1, 'e' + (board.entities.length + 1)));
 
 //Change from windows 10
+//Change from Linux
 
 let entityIds;
 let round = 0;
